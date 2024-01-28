@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
 
-.label{
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.label {
   z-index: 0;
 }
+
 .label .IMAGE-i-NATION {
   color: #ffffff;
   font-family: 'Josefin Sans', sans-serif;
@@ -16,8 +22,10 @@
   text-align: center;
   top: 0;
   width: 166px;
+  opacity: 1; /* Varsayılan olarak görünür */
+  transition: opacity 0.3s ease-in-out;
 }
-/* .video-page, */
+
 .compress-page,
 .remove-page,
 .giris {
@@ -25,18 +33,17 @@
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  position:absolute;
+  position: absolute;
   top: 50%;
-  transform: translateX(-50%) translateY(-45%);
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
   width: 100px;
   cursor: pointer;
 }
-/* .video-page{
-  left:50%;
-} */
+
 .remove-page {
   left: 63%;
 }
@@ -46,7 +53,39 @@
 }
 
 .giris {
-  left: 100%;
-  right: 0;
-  transform: translateX(-100%) translateY(-45%);
+  left: auto;
+  right: 25px; /* Sağ üst köşede 25px mesafede */
+  transform: translateX(0) translateY(-50%);
+}
+
+@media only screen and (max-width: 768px) {
+  .label .IMAGE-i-NATION {
+    font-size: 12px;
+    margin-top: 10px;
+    left: 10px;
+    width: auto;
+  }
+
+  .compress-page,
+  .remove-page,
+  .giris {
+    font-size: 14px;
+    width: 80px;
+  }
+
+  .remove-page {
+    left: 55%;
+  }
+
+  .compress-page {
+    left: 30%;
+  }
+
+  .giris {
+    right: 10px;
+  }
+
+  .label .IMAGE-i-NATION {
+    opacity: 0; /* Ekran genişliği belirli bir değerin altına düştüğünde gizlenir */
+  }
 }

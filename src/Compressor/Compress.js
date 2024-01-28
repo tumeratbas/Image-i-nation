@@ -25,8 +25,8 @@ const Compress = () => {
     e.preventDefault();
 
     const options = {
-      maxSizeMB: 1,
-      maxWidthOrHeight: 500,
+      maxSizeMB: 5,
+      maxWidthOrHeight: 1000,
       useWebWorker: true,
     };
 
@@ -48,32 +48,34 @@ const Compress = () => {
 
   return (
     <div className="m-5">
-      <div className="row mt-5">
-        <div className="col-lg-4 col-md-12 col-sm-12">
+      <div className="row">
+        <div className="titleC">
+        <h1>COMPRESS YOUR IMAGE</h1></div>
+        <div className="ust">
           {uploadImage ? (
             <Card.Img className="ht" variant="top" src={originalLink} />
           ) : (
             <Card.Img
               className="ht"
               variant="top"
-              src="http://navparivartan.in/wp-content/uploads/2018/11/placeholder.png"
+              src=""
             />
           )}
-          <div className="d-flex justify-content-center mt-3">
+          <div className="fileC">
             <input
               type="file"
               accept="image/*"
-              className="mt-2 btn btn-dark"
+              className="docbtn"
               onChange={(e) => handle(e)}
             />
           </div>
         </div>
-        <div className="col-lg-4 col-md-12 mb-5 mt-5 col-sm-12 d-flex justify-content-center align-items-center">
+        <div className="compress-btn">
           <br />
           {outputFileName ? (
             <button
               type="button"
-              className=" btn btn-dark"
+              className="btn-dark"
               onClick={(e) => click(e)}
             >
               Compress
@@ -83,14 +85,14 @@ const Compress = () => {
           )}
         </div>
 
-        <div className="col-lg-4 col-md-12 col-sm-12 mt-1">
+        <div className="ht2">
           <Card.Img variant="top" src={compressedLink} />
           {clicked ? (
-            <div className="d-flex justify-content-center">
+            <div className="download">
               <a
                 href={compressedLink}
                 download={outputFileName}
-                className="mt-2 btn btn-dark"
+                className="download-btn"
               >
                 Download
               </a>

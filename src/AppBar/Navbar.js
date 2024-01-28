@@ -18,9 +18,9 @@ function Navbar() {
   const handleRemoverClick = () => {
     navigate('/remover');
   };
-  const handleVideoClick = () => {
-    navigate('/video');
-  };
+  // const handleVideoClick = () => {
+  //   navigate('/video');
+  // };
   const handleCompressClick = () => {
     navigate('/compress');
   };
@@ -68,9 +68,9 @@ function Navbar() {
         <div className="remove-page" onClick={handleRemoverClick}>
             <div className="remove-wrapper">REMOVE BACKGROUND</div>
         </div>
-        <div className="video-page" onClick={handleVideoClick}>
+        {/* <div className="video-page" onClick={handleVideoClick}>
             <div className="video-wrapper">video</div>
-        </div>
+        </div> */}
 
         {/* Sağ tarafta Clerk ile giriş yapma kısmı */}
         <div className='giris'>

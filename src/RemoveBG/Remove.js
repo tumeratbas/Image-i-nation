@@ -47,7 +47,7 @@ const Remover = () => {
         </div>
         <div className="flex justify-center items-center flex-col h-1">
           <form className="info_container ">
-            <label htmlFor="userImg" className="info_text">Select a File</label>
+            <label htmlFor="userImg" className="info_text"></label>
             <input type="file" id="userImg" className="file" onChange={handleFileInputChange} required />
             {!isUpload ? (
               <button
