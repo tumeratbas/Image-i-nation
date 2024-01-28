@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+.label{
+  z-index: 0;
+}
+.label .IMAGE-i-NATION {
+  color: #ffffff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 14px;
+  left: 25px;
+  letter-spacing: 1px;
+  line-height: normal;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 166px;
+}
+/* .video-page, */
+.compress-page,
+.remove-page,
+.giris {
+  color: #ffffff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position:absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-45%);
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  width: 100px;
+  cursor: pointer;
+}
+/* .video-page{
+  left:50%;
+} */
+.remove-page {
+  left: 63%;
+}
+
+.compress-page {
+  left: 36%;
+}
+
+.giris {
+  left: 100%;
+  right: 0;
+  transform: translateX(-100%) translateY(-45%);
+}
